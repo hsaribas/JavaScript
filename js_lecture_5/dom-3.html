@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bgdanger{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="list">
+        <li>Ali</li>
+        <li>Hasan</li>
+        <li>Sultan</li>
+        <li>Salih</li>
+    </ul>
+
+    <script>
+        //generate the new li and add it into existing ul
+        const li1 = document.createElement("li");
+        li1.innerText = "Fevzi";
+        li1.setAttribute("class", "bgdanger");
+
+        //append the li in the end of the list
+        document.querySelector("#list").append(li1);
+
+        //if we want to remove any li
+        document.querySelector("#list li:nth-child(2)").remove();
+    </script>
+</body>
+
+</html>

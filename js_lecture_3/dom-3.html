@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+    
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center display-3">Simple Calculator</h1>
+        <div class="form-group">
+            <label>Enter 1st Number: </label>
+            <input type="text" class="form-control" id="n1">
+        </div>
+        <div class="form-group">
+            <label>Enter 2nd Number: </label>
+            <input type="text" class="form-control" id="n2">
+        </div>
+        <div class="form-group mt-4">
+            <button class="btn btn-primary" onclick="add()">+</button>
+            <button class="btn btn-success" onclick="substract()">-</button>
+            <button class="btn btn-info" onclick="multiply()">x</button>
+            <button class="btn btn-secondary" onclick="divide()">/</button>
+        </div>
+        <hr>
+        <div class="alert alert-success" id="show"></div>
+    </div>
+
+
+
+    <script>
+        function add() {
+            let num1 = document.querySelector('#n1').value;
+            let num2 = document.querySelector('#n2').value;
+            //maybe you can use parseInt() or Number()
+            let sum = Number(num1) + Number(num2);
+            document.querySelector('#show').innerHTML = `The total of ${num1} and ${num2} is ${sum}`;
+        }
+
+        function substract() {
+            let num1 = document.querySelector('#n1').value;
+            let num2 = document.querySelector('#n2').value;
+            //maybe you can use parseInt() or Number()
+            let sub = Number(num1) - Number(num2);
+            document.querySelector('#show').innerHTML = `The substraction of ${num1} and ${num2} is ${sub}`;
+        }
+
+        function multiply() {
+            let num1 = document.querySelector('#n1').value;
+            let num2 = document.querySelector('#n2').value;
+            //maybe you can use parseInt() or Number()
+            let mult = Number(num1) * Number(num2);
+            document.querySelector('#show').innerHTML = `The multiplication of ${num1} and ${num2} is ${mult}`;
+        }
+
+        function divide() {
+            let num1 = document.querySelector('#n1').value;
+            let num2 = document.querySelector('#n2').value;
+            //maybe you can use parseInt() or Number()
+            let div = parseFloat(num1) / parseFloat(num2);
+            document.querySelector('#show').innerHTML = `The division of ${num1} and ${num2} is ${div}`;
+        }
+    </script>
+    
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

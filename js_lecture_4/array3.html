@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const fruits = ["Apple", "Mango", "Banana", "Peach", "Cherry"];
+        console.log(fruits);
+        //remove element from last of array
+        fruits.pop();
+        console.log(fruits);
+        //add element at the last
+        fruits.push("Guava");
+        console.log(fruits);
+        //remove the element from the starting of an array
+        fruits.shift();
+        console.log(fruits);
+        //adding the element from the starting of an array
+        fruits.unshift("Orange");
+        console.log(fruits);
+        //want to reverse the array elements
+        fruits.reverse();
+        console.log(fruits);
+        //sort the array ascending order wise
+        fruits.sort();
+        console.log(fruits);
+        //sort the array descending order wise
+        fruits.sort().reverse();
+        console.log(fruits);
+        //checking if an item exists in array
+        console.log(fruits.includes("Watermelon"));
+    </script>
+</body>
+
+</html>

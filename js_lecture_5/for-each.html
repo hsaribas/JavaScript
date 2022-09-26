@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="list" style="list-style-type: none;">
+
+    </ul>
+
+    <ul id="list1" style="list-style-type: none;">
+
+    </ul>
+
+    <script>
+        //using the for each loop. Also putting the data in out frontend
+        const cars = ["BMW", "Mercedes", "Honda", "Toyota", "Porsche"];
+        let finalCars = "";
+
+        //for-of loop
+        const names = ["Ali", "Ahmet", "Hasan", "Salih", "Fatih"];
+        let finalNames = "";
+
+        cars.forEach((car, i) => {
+            finalCars += `<li>${i + 1} - ${car}</li>`;
+        });
+
+        //print the names with number counter/iterator
+        for(let [i, name] of names.entries()){
+            finalNames += `<li>${i + 1} - ${name}</li>`;
+        }
+
+        //passing the data into ul
+        document.querySelector('#list').innerHTML = finalCars;
+        //passing the data into ul
+        document.querySelector('#list1').innerHTML = finalNames;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+-> topics for today:
+    -> spread operator
+    -> error handling
+    -> dom
+    -> timer
+    -> sync-async
+
+-> Applications:
+    -> Ecommerce/User Api App
+    -> todo list with data store in localStorage
+
+DOM-1:
+-> make an object of students
+-> render the object data into bootstrap table
+-> the students whose score is less than 50, make that rows red color
+
+DOM-2:
+-> make an object of students
+-> render the object data into bootstrap table
+-> toggle the background color red by clicking on rows
+-> generate the delete button against each row and when user press this delete
+   button, my data get removed
+
+
+----------------------------------------
+-> APIs
+    -> creating user (attach this API with form)
+    -> fetching users
+    -> updating users
+    -> deleting users
+
+-> built-in function that fetch the api data
+    -> fetch();
+    -> axios (mostly used in reactjs)
+
+-> async - await
+-> async is used with the function name
+-> await is used with actual functionalities
+
+-> Home task
+   -> get the data from the following API:
+       https://fakestoreapi.com/products
+   -> show all the data in bootstrap cards
+   -> make sure your Web app is responsive
+
+   -----------------------------------------
+   localStorage.setItem(key,value);
+   localStorage.getItem(key);
+
+

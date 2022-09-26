@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let x = 10;
+        var y = 30;
+
+        function test1(){
+            x = 20;
+            console.log(x);
+        }
+
+        function test2(){
+            y = 50;
+            console.log(y);
+        }
+        function test3(){
+            var x = "huzeyfe";
+            let y = "saribas";
+            if(true){
+                var a = "good";
+                let b = "morning";
+            }
+            console.log(x,y,a);
+            //console.log(b);
+        }
+
+        test3();
+        test1();
+        test2();
+    </script>
+</body>
+
+</html>

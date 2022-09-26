@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>Enter Your Name:</label>
+    <input type="text" id="fname">
+    <br>
+    <button ondblclick="info()">Show</button>
+    <br>
+    <div id="display"></div>
+    <script>
+        function info() {
+            //getting the data from the input field
+            var name = document.querySelector('#fname').value;
+            //alert(`Welcome ${name}`);
+            document.querySelector(`#display`).innerHTML = `Welcome ${name}`;
+        }
+    </script>
+</body>
+
+</html>

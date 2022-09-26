@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //take 2 arrays, copy the data of these 2 arrays into new array
+        const cars = ["BMW", "Mercedes", "Honda", "Toyota"];
+        const newCars = ["Ferrari", "Porsche", "Tesla"];
+
+        const totalCars = [];
+
+        for(let i in cars){
+            totalCars.push(`${cars[i]} ${newCars[i]}`);
+        }
+        console.log(totalCars);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>Enter total bill:</label>
+    <input type="text" id="bill">
+    <br>
+    <button onclick="calculate()">Show</button>
+    <div id="show"></div>
+
+    <script>
+        function calculate(){
+            var bill = document.querySelector('#bill').value;
+            //need to convert into number
+            bill = Number(bill);
+            console.log(typeof(bill));
+
+            switch(true){
+                case bill > 1500:
+                    bill = bill - (bill * 15) / 100;
+                    document.querySelector('#show').innerHTML = `The total bill is ${bill}`;
+                    break;
+                case bill > 1000:
+                    bill = bill - (bill * 10) / 100;
+                    document.querySelector('#show').innerHTML = `The total bill is ${bill}`;
+                    break;
+                case bill > 500:
+                    bill = bill - (bill * 5) / 100;
+                    document.querySelector('#show').innerHTML = `The total bill is ${bill}`;
+                    break;
+                default:
+                    alert("You didn't get the discount");
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

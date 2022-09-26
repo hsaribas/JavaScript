@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const scores = [-100, 150, -32, 43, 2, -20];
+
+        //some method
+        if(scores.some(item => item > 100)){
+            alert("we have the values more than 100 in array");
+        }
+
+        //every method
+        if(scores.every(item => item < 0)){
+            alert("all values are not negative");
+        }else{
+            alert("all values are negative");
+        }
+    </script>
+</body>
+
+</html>

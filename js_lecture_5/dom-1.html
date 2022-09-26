@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="list">
+        <li>
+            Item 1 <span>test</span>
+        </li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li id="s1">Item 4</li>
+        <li>Item 5</li>
+    </ul>
+
+    <script>
+        const list = document.querySelector('#list');
+        console.log(list);
+
+        //children
+        const dom1 = list.children;
+        console.log(dom1);
+
+        //firstElementChild
+        const dom2 = list.firstElementChild;
+        console.log(dom2);
+
+        //lastElementChild
+        const dom3 = list.lastElementChild;
+        console.log(dom3);
+
+        //parentElement
+        const dom4 = list.parentElement;
+        console.log(dom4);
+
+        //nextElementSibling
+        const s1 = document.querySelector('#s1');
+        const dom5 = s1.nextElementSibling;
+        console.log(dom5);
+    </script>
+</body>
+
+</html>

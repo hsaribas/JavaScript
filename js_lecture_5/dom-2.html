@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blue{
+            background-color: blue;
+        }
+        .red{
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="a1">Welcome to JavaScript</h1>
+    
+    <button id="btn1">Remove</button>
+    <button id="btn2">Toggle</button>
+    <button id="btn3">Replace</button>
+
+    <script>
+        const h = document.getElementById("a1");
+        h.classList.add("blue")
+
+        //when click the button, heading turns blue
+        document.querySelector('#btn1').addEventListener('click', () => {
+            h.classList.remove("blue");
+        })
+
+        //toggle by clicking the button
+        document.querySelector('#btn2').addEventListener('click', () => {
+            h.classList.toggle("red");
+        })
+
+        //replacing by clicking the button
+        document.querySelector('#btn3').addEventListener('click', () => {
+            if(h.classList.contains("blue")){
+                h.classList.replace("blue", "red");
+            }else{
+                g.classList.replace("red", "blue");
+            }
+        })
+    </script>
+</body>
+
+</html>

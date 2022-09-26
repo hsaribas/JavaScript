@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center display-3">List of All Employees</h1>
+        <table class="table table-striped" id="employees">
+            <span class="text-center" id="loading">Data is Loading. Please wait...</span>
+        </table>
+    </div>
+    <script>
+
+        //registering the API url
+        const api_url = "https://jsonplaceholder.typicode.com/users";
+        async function getapi(url) {
+            
+            //fetching the data from api and storing its response
+            const response = await fetch(url);
+
+            //always need to get the response into JSON format
+            const data = await response.json();
+            console.log(data);
+
+            //getting the loading function
+            if (response) {
+                hideloader();
+            }
+            show(data);
+        }
+
+        //calling the function
+        getapi(api_url);
+
+        //function to hide the loading message
+        function hideloader() {
+            document.getElementById("loading").style.display = 'none';
+        }
+
+        //function that display our API data in table
+        function show(data) {
+            let tab = `
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Address</th>
+            </tr>
+            `;
+
+            //run the loop for rendering all the data coming from API
+            for (let x of data) {
+                tab += `<tr>
+                    <td>${x.id}</td>
+                    <td>${x.name}</td>
+                    <td>${x.username}</td>
+                    <td>${x.email}</td>
+                    <td>${x.address.street}</td>
+                    </tr>`;
+            }
+            
+            //pushing all the data into my HTML table
+            document.getElementById("employees").innerHTML = tab;
+        }
+    </script>
+</body>
+
+</html>

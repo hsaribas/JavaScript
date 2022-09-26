@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //using spread operator to hold the previous data, also taking the new data at same time
+        const num1 = [11, 12, 13, 14, 15];
+        const num2 = [10, 20, 20, 40];
+        const num3 = 22;
+
+        //combining using the spread operator
+        const final1 = [88, ...num1, num3, ...num2];
+        console.log(final1);
+
+        //working with the object using spread operator
+        const student = {
+            id: 1234,
+            name: "Huzeyfe",
+            gender: "Male",
+            city: "Izmir"
+        };
+
+        const num4 = 5;
+        const newStudent = student;
+        //updating the name
+        newStudent.name = "Hasan";
+
+        //shallow copy
+        const newerStudent = {...student, city: "Amsterdam", no: 3243};
+        console.log(newerStudent);
+    </script>
+</body>
+
+</html>

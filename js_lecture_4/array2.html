@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //find the largest value from the array
+        const scores = [12, 45, 54, 122, 99, 555, 30];
+        
+        let largest = scores[0];
+        for(var i=0; i<scores.length; i++){
+            //comparing the indexes of array
+            if(scores[i] > largest){
+                largest = scores[i];
+            }
+        }
+        console.log(largest);
+    </script>
+</body>
+
+</html>

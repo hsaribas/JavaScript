@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="test1">Click me!</h1>
+
+    <button id="test2">Button 1</button>
+    <button id="test3">Button 2</button>
+    <button id="test4">Button 3</button>
+    <button id="test5">Button 4</button>
+
+    <script>
+        //method: 1
+        //calling the event directly by storing it into variable
+        const sayHello = function(){
+            alert("this is clicked!");
+        } 
+        document.querySelector('#test1').onclick = sayHello;
+
+        //method: 2
+        //we can also call function directly to the query selector without using variable
+        document.querySelector('#test2').onclick = function(){
+            alert("method 2");
+        }
+
+        //method: 3
+        //handling the event using arrow functions
+        document.querySelector('#test3').onclick = () => {
+            alert("method 3");
+        }
+
+        //method: 4
+        //addEventListener(); that helps us to run our function on any event
+        document.querySelector('#test4').addEventListener('click', sayHello);
+
+        //method: 5
+        document.querySelector('#test5').addEventListener('click', () => {
+            alert('method 5');
+        })
+    </script>
+</body>
+
+</html>

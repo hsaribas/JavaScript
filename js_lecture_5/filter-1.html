@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="txtcheck">
+    <ul id="show">
+
+    </ul>
+    <script>
+        const names = ["Ali", "mehmet", "omer", "Salih", "Fevzi"];
+
+        const filterfunction = () => {
+            let finalNames = names;
+            // let finalNames = names;
+            let testStr = "";
+
+            //only getting those names that starts from lowercase
+            finalNames = finalNames.filter(
+                name => name.startsWith(name.toLowerCase())
+            );   
+
+            finalNames.forEach(name => {
+                testStr += `<li>${name}</li>`;
+            });
+
+            document.querySelector('#show').innerHTML = testStr;
+        }
+        filterfunction(names);
+
+        document.querySelector('#txtcheck').addEventListener('input', (e) => {
+            console.log(e.target.value);
+        })
+    </script>
+</body>
+
+</html>

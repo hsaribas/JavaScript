@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="cit">
+
+    </ul>
+
+    <script>
+        const cities =[
+            {
+                city: "Istanbul",
+                population: 10000
+            },
+            {
+                city: "Izmir",
+                population: 15000
+            },
+            {
+                city: "Adana",
+                population: 3000
+            },
+            {
+                city: "Van",
+                population: 14000
+            },
+        ];
+
+        let listItems = "";
+        //iterating the array using map
+        cities.map((item) => {
+            listItems += `<li>${item.city} - ${item.population}</li>`
+        })
+        document.querySelector('#cit').innerHTML = listItems;
+    </script>
+</body>
+
+</html>

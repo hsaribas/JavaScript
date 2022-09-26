@@ -1,0 +1,50 @@
+for-in (works with array)
+for-of
+for-each
+map
+filter
+reduce
+dom (advance concepts)
+pipeline
+every
+some
+timeout()
+Browser Storage
+ -> localStorage
+ -> sessionStorage
+ -> IndexedDB
+  -> spread operator
+
+
+Syntax of for in
+for(let i in)
+
+
+format of arrat object
+const arr = [
+    {
+
+    },
+    {
+
+    },
+    {
+
+    },
+]
+
+---------------------------------------
+-> we have the folloing methods to iterate the array 
+    -> for, while, do while loops
+    -> for in loop
+    -> for of loop
+    -> for each loop
+    -> map
+
+---------------------------------------
+-> add
+-> remove 
+-> replace
+-> toggle
+-> contains
+

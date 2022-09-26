@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <style>
+        .table-warning {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center display-3">Students Data list</h1>
+        <table id="tblPoint" class="table">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Score</th>
+                    <td>Delete</td>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        //making an array object
+        const data = [
+            { id: 1, name: "Huzeyfe", email: "huzeyfe@gmail.com", score: 100 },
+            { id: 3, name: "Hasan", email: "huzeyfe@gmail.com", score: 100 },
+            { id: 2, name: "Alper", email: "huzeyfe@gmail.com", score: 10 },
+            { id: 4, name: "Sultan", email: "huzeyfe@gmail.com", score: 20 },
+            { id: 5, name: "Salih", email: "huzeyfe@gmail.com", score: 40 },
+        ]
+        //passing my object data into above table
+        let strRow = "";
+        for (let item of data) {
+            strRow += `
+            <tr>
+            <td>${item.id}</td>
+            <td>${item.name}</td>
+            <td>${item.email}</td>
+            <td>${item.score}</td>
+            <td><button class="btn btn-danger btn-sm">Delete</button></td>
+                </tr>
+            `;
+        }
+        document.querySelector('#tblPoint tbody').innerHTML = strRow;
+        //we are getting the rows selected when clicked
+        document.querySelectorAll('#tblPoint tbody tr').forEach(item => {
+            item.addEventListener('click', (e) => {
+                //using the closet to get the tr individually from its parent
+                //closest is the method for choosing any thing from the multiple identical things
+                const tr = e.target.closest("tr");
+                tr.classList.toggle("table-warning");
+            })
+        });
+        //delete function
+        document.querySelectorAll('#tblPoint tbody .btn-sm').forEach(item => {
+            item.addEventListener('click', (e) => {
+                if (!confirm("Are you Sure!")) {
+                    return;
+                } else {
+                    const tr = e.target.closest("tr");
+                    tr.classList.toggle("table-warning");
+                    e.target.innerHTML = '<i class="fa-solid fa-spinner"></i>';
+                    //removing the tr after 2 seconds
+                    setTimeout(() => {
+                        tr.remove();
+                    }, 2000);
+                }
+            })
+        })
+    </script>
+</body>
+</html>

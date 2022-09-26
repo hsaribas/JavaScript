@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p></p>
+
+    <script>
+        localStorage.setItem("key1", "statement 1");
+        sessionStorage.setItem("key2", "Statement 2");
+
+        //getting the data from the localStorage
+        let store = localStorage.getItem("key1");
+        
+        //showing into p tag
+        document.querySelector('p').textContent = store;
+    </script>
+</body>
+
+</html>

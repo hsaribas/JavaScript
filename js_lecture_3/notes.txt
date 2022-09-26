@@ -1,0 +1,16 @@
+functions
+
+1. function definiton
+2. function calling
+
+function function_name(){
+
+}
+
+-> events (user behaviour)
+-> javascript always use ID to get the data input fields 
+
+ternary operator
+condition ? true : false;
+
+setTimeOut()

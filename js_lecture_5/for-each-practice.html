@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="getinfo">Get Information About Turkey:</button>
+    <br>
+    <div id="finalpop"></div>
+    <ul id="mycities">
+
+    </ul>
+
+    <script>
+        const cities =[
+            {
+                city: "Istanbul",
+                population: 10000
+            },
+            {
+                city: "Izmir",
+                population: 15000
+            },
+            {
+                city: "Adana",
+                population: 3000
+            },
+            {
+                city: "Van",
+                population: 14000
+            },
+        ];
+
+        //getting my code output by clicking the button
+        document.querySelector('#getinfo').addEventListener('click', () => {
+            let avgPopulation = 0;
+            cities.forEach((item) => {
+                //just adding all the population values 
+                avgPopulation += item.population;
+            });
+            //finally calculating the average population
+            avgPopulation /= cities.length;
+
+            let listItems = "";
+            //printing the cities with population
+            cities.forEach((item) => {
+                listItems += `<li>${item.city} - ${item.population}</li>`
+            })
+
+            //printing my result into div tag
+            document.querySelector('#finalpop').innerHTML = `The Average population is ${avgPopulation}`;
+
+            //printing the data into empty ul
+            document.querySelector('#mycities').innerHTML = listItems;
+        });
+
+        
+    </script>
+</body>
+
+</html>

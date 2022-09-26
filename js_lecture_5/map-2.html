@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="cit">
+
+    </ul>
+
+    <script>
+        /*write a program that add 10% more population in those cities 
+         who have the population more than 10000000 */
+        const cities =[
+            {
+                city: "Istanbul",
+                population: 10000000
+            },
+            {
+                city: "Izmir",
+                population: 30000000
+            },
+            {
+                city: "Adana",
+                population: 1000000
+            },
+            {
+                city: "Van",
+                population: 20000000
+            },
+        ];
+
+        let listItems = "";
+        //iterating the array using map
+        cities.map((item) => {
+            if(item.population > 10000000){
+                //calculating the 10% increment
+                item.population *= 1.1;
+                item.population = item.population.toFixed(2);
+                listItems += `<li>${item.city} - ${item.population}</li>`;
+            }
+        })
+        document.querySelector('#cit').innerHTML = listItems;
+    </script>
+</body>
+
+</html>
